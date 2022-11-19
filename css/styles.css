@@ -2,12 +2,92 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+.container {
+    margin-top: 20%;
+}
+
+.switch-box {
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+}
+
+.switch-text {
+    position: relative;
+    bottom: 14px;
+}
+
+.line {
+    visibility: hidden;
+}
+
+@media (max-width:667px) {
+    .switch-box {
+        position: static;
+    }
+
+    .switch-text {
+        position: relative;
+        margin-right: 68%;
+    }
+
+    .line {
+        visibility: visible
+    }
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    width: 55px;
+}
+
+.slider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: hsl(230, 22%, 74%);
+    border-radius: 34px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    right: 2.5px;
+    bottom: 2.5px;
+    background-color: white;
+    border-radius: 100%;
+}
+
+.slider:hover {
+    background-color: hsl(146, 68%, 55%);
+}
+
+input:checked+.slider {
+    background-color: hsl(163, 72%, 41%);
+}
+
+input:checked+.slider::before {
+    transform: translateX(-25px);
+    background-color: hsl(232, 19%, 15%);
+}
+
 .back-side-color {
     height: 400px;
     position: absolute;
-    background-color: hsl(225, 100%, 98%);
+    background-color: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
     background-color: red;
-    /* z-index: -1; */
 }
 
 .dark {

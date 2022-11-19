@@ -1,4 +1,4 @@
-document.querySelector("#btn").addEventListener("click",function () {
+document.querySelector(".slider").addEventListener("click",function () {
     document.querySelector("body").classList.toggle("dark");
     document.querySelector("h3").classList.toggle("text-muted");
     document.querySelector("h6").classList.toggle("text-muted");
