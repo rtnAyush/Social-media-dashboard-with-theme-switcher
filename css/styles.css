@@ -2,6 +2,10 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+.bg-color {
+    background: linear-gradient(0deg, hsl(0, 0%, 100%) 75%, hsl(225, 100%, 96%) 8%);
+}
+
 .container {
     margin-top: 20%;
 }
@@ -33,6 +37,14 @@ body {
 
     .line {
         visibility: visible;
+    }
+
+    .bg-color {
+        background: linear-gradient(to top, hsl(0, 0%, 100%) 90%, hsl(225, 100%, 96%) 8%);
+    }
+
+    .dark {
+        background: linear-gradient(0deg, hsl(230, 17%, 14%) 90%, hsl(232, 19%, 17%) 8%);
     }
 }
 
@@ -71,11 +83,11 @@ body {
 }
 
 .slider:hover {
-    background-color: hsl(146, 68%, 55%);
+    background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
 
 input:checked+.slider {
-    background-color: hsl(163, 72%, 41%);
+    background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 }
 
 input:checked+.slider::before {
@@ -83,15 +95,8 @@ input:checked+.slider::before {
     background-color: hsl(232, 19%, 15%);
 }
 
-.back-side-color {
-    height: 400px;
-    position: absolute;
-    background-color: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
-    background-color: red;
-}
-
 .dark {
-    background-color: hsl(230, 17%, 14%);
+    background: linear-gradient(0deg, hsl(230, 17%, 14%) 75%, hsl(232, 19%, 17%) 8%);
     color: white;
     border: none;
 }
@@ -137,8 +142,9 @@ h1 {
 }
 
 .instra {
-    border: 0;
-    border-top: 5px solid red;
+    border-image: linear-gradient(90deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%)) 100;
+    border-width: 0;
+    border-top-width: 5px;
 }
 
 .facebook {
@@ -164,10 +170,11 @@ h1 {
     color: hsl(356, 69%, 56%);
 }
 
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
 
-
-/* Very Dark Blue (BG): hsl(230, 17%, 14%)
-- Very Dark Blue (Top BG Pattern): hsl(232, 19%, 15%)
-- Dark Desaturated Blue (Card BG): hsl(228, 28%, 20%)
-- Desaturated Blue (Text): hsl(228, 34%, 66%)
-- White (Text): hsl(0, 0%, 100%) */
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
